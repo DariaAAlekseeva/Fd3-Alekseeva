@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import DoubleButton from './DoubleButton';
+import {withRainbowFrame} from './withRainbowFrame';
 
-function App() {
+const App = () => {
+  const colors = ['red','orange', 'yellow','green', '#00BFFF', 'blue', 'purple', 'deep-purple'];
+  let FramedDoubleButton = withRainbowFrame(colors)(DoubleButton);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <DoubleButton caption1='однажды' caption2='пору' cbPressed={num => alert(num)} > в студеную зимнюю </DoubleButton>
+    <FramedDoubleButton caption1="я из лесу" caption2="мороз" cbPressed={ num => alert(num) }>вышел, был сильный</FramedDoubleButton>
+    </>
   );
-}
+};
 
 export default App;
