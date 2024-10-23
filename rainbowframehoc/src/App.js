@@ -1,6 +1,6 @@
 import './App.css';
-import DoubleButton from './components /DoubleButton';
-import { withRainbowFrame } from './components /withRainbowFrame';
+import DoubleButton from './components/DoubleButton';
+import { withRainbowFrame } from './components/withRainbowFrame';
 
 const App = () => {
   const colors = ['red', 'orange', 'yellow', 'green', '#00BFFF', 'blue', 'purple', 'deep-purple'];
