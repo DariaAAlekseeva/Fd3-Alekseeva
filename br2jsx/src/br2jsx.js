@@ -7,7 +7,7 @@ const Br2JSX = ({ text }) => {
     <div className='br2jsx'>
       {lines.map((line, index) => [
           line,
-          index < lines.length - 1 && <br />
+          index < lines.length - 1 && <br key={index} />
       ])}
     </div>
   );
