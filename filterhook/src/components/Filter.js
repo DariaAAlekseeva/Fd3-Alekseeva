@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Controls from "./Controls";
 import List from "./List";
 
@@ -8,23 +8,27 @@ const Filter = ({ initWords }) => {
 
     const sortChanged = () => setIsSorted(!isSorted);
 
-    const filterChanged = (eo) => setFilter(eo.target.value);
+    const filterChanged = (newFilter) => setFilter(newFilter);
 
     const reset = () => {
         setFilter('')
         setIsSorted(false)
     }
 
-    let filteredWords = [...initWords];
-    if (isSorted)
-        filteredWords.sort();
-    if (filter)
-        filteredWords = filteredWords.filter(s => s.includes(filter));
+    const memoizedValue = useMemo(()=>{
+        let filteredWords=[...initWords]
+        if (isSorted)
+            filteredWords.sort();
+        if (filter)
+            filteredWords = filteredWords.filter(s => s.includes(filter));
+        return filteredWords;
+    }, [filter, initWords, isSorted])
 
     return (
+
         <>
             <Controls isSorted={isSorted} filter={filter} sortChanged={sortChanged} filterChanged={filterChanged} reset={reset} />
-            <List words={filteredWords} />
+            <List words={memoizedValue} />
         </>
     )
 }
