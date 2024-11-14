@@ -2,6 +2,7 @@ import React from 'react';
 import eventEmitter from '../eventEmitter';
 import MobileClient from './MobileClient';
 import './MobileCompany.css';
+import { v4 as uuidv4 } from 'uuid';
 
 class MobileCompany extends React.PureComponent {
   constructor(props) {
@@ -50,7 +51,7 @@ class MobileCompany extends React.PureComponent {
 
   saveNewClient = () => {
     const newClient = {
-      id: Date.now(),
+      id: uuidv4(),
       fam: this.newFamRef.current.value,
       im: this.newImRef.current.value,
       otch: this.newOtchRef.current.value,
