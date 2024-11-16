@@ -2,7 +2,7 @@ import React from 'react';
 
 import MobileCompany from './components/MobileCompany';
 
-let companyName='A1';
+
 let clientsArr=[ 
   {id:101, fam:"Иванов", im:"Иван", otch:"Иванович", balance:200}, 
   {id:105, fam:"Сидоров", im:"Сидор", otch:"Сидорович", balance:250}, 
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <MobileCompany 
-    name={companyName}
+   
     clients={clientsArr}
   />
  
