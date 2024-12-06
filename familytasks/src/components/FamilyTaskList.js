@@ -1,4 +1,5 @@
 import './FamilyTaskList.css';
+import './FamilyTaskList_adapt.css';
 import { useState, useEffect } from "react";
 import TaskForm from "./TaskForm";
 import Login from './Login';

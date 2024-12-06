@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './Login.css';
+import './Login_adapt.css';
 
 function Login({ handleLoginSuccess }) {
 

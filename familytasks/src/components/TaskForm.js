@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './TaskForm.css';
+import './TaskForm_adapt.css';
 
 function TaskForm({ onAddTask, users }) {
     const [newTask, setNewTask] = useState('');

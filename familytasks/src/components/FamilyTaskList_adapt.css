@@ -1,0 +1,60 @@
+
+@media (max-width: 768px) {
+    .container {
+      padding: 10px;
+      margin: 10px;
+      max-width: 90%;
+    }
+  
+    .filterButtons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .hideCompleted {
+      font-size: 12px;
+      margin-left: 0;
+      justify-content: center;
+    }
+  
+    .taskItem {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .pagination {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .pagination button {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+  
+    option {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      margin: 5px;
+      padding: 10px;
+    }
+  
+    .greeting {
+      font-size: 1.5rem;
+    }
+  
+    button {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+  
+    .hideCompleted {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }

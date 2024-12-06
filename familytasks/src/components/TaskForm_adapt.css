@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+    .taskForm {
+      padding: 10px;
+      gap: 8px;
+    }
+  
+    .taskForm input,
+    .taskForm select,
+    .taskForm button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .taskForm {
+      gap: 5px;
+    }
+  
+    .taskForm input,
+    .taskForm select,
+    .taskForm button {
+      font-size: 12px;
+      padding: 6px;
+    }
+  }
