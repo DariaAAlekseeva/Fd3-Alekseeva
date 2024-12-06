@@ -1,0 +1,59 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);}
+
+.loginForm {
+    background-color: var(--task-background); /* Белый фон формы */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color); /* Лёгкая тень */
+    width: 100%;
+    max-width: 400px;}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+}
+
+ .loginForm{
+    display: block;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.loginForm input {
+    margin: 5px 0px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid  var(--primary-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.loginForm input:focus {
+    border-color: var(--highlight-color); 
+    outline: none;
+    box-shadow: 0 0 5px rgba(250, 64, 50, 0.5);
+}
+
+.loginForm button {
+    margin: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+

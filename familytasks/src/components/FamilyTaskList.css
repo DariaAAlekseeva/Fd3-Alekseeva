@@ -1,0 +1,135 @@
+:root {
+  --background-color: #FEF3E2; 
+  --primary-color: #ffbf52;
+  --secondary-color: #d76a1c; 
+  --highlight-color: #c43104;
+  --text-color: #4d4d4d;
+  --task-background: #ffffff; 
+  --completed-color: #e0e0e0; 
+  --shadow-color: rgba(0, 0, 0, 0.1); 
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--task-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+}
+
+.filterButtons {
+  display: inline;
+}
+
+button {
+  margin: 3px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+button.active {
+  background-color: var(--highlight-color);
+  color: white;
+}
+
+.taskItem {
+
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--task-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  transition: background-color 0.3s ease;
+}
+
+.completed{
+  text-decoration: line-through;
+  color: var(--text-color);
+}
+
+.taskItem:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.greeting {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+ .exitButton{
+  background-color: var(--highlight-color)
+}
+
+
+.hideCompleted {
+  margin-left: 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.hideCompleted input {
+  margin-right: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.taskItem {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.taskItem.removing {
+  opacity: 0;
+  transform: translateX(-20px);
+}
